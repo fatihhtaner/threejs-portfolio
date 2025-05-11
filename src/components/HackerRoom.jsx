@@ -9,38 +9,54 @@ const HackerRoom = (props) => {
   return (
     <group {...props} dispose={null}>
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.screen_screens_0.geometry}
         material={materials.screens}
       >
         <meshMatcapMaterial map={screenTxt} />
       </mesh>
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.screen_glass_glass_0.geometry}
         material={materials.glass}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_1.geometry}
         material={materials.table_mat}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_2.geometry}
         material={materials.computer_mat}
       >
         <meshMatcapMaterial map={monitortxt} />
       </mesh>
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_3.geometry}
         material={materials.server_mat}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_4.geometry}
         material={materials.vhsPlayer_mat}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_5.geometry}
         material={materials.stand_mat}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.table_table_mat_0_6.geometry}
         material={materials.mat_mat}
       />
