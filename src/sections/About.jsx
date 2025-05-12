@@ -1,9 +1,10 @@
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
+  const globeEl = useRef();
 
   const handleCopy = () => {
     navigator.clipboard.writeText("ibrahimfatihtaner@gmail.com");
@@ -13,6 +14,30 @@ const About = () => {
       setHasCopied(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    let animationId;
+    const animate = () => {
+      if (globeEl.current && globeEl.current.controls()) {
+        const controls = globeEl.current.controls();
+        controls.autoRotate = true;
+        controls.update();
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+
+    const timer = setTimeout(() => {
+      animate();
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, []);
+
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -48,6 +73,7 @@ const About = () => {
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
+                ref={globeEl}
                 height={326}
                 width={326}
                 backgroundColor="rgba(0,0,0,0)"
@@ -69,6 +95,17 @@ const About = () => {
                     size: 100,
                   },
                 ]}
+                controllerType="orbit"
+                enablePointerInteraction={true}
+                onGlobeReady={() => {
+                  if (globeEl.current && globeEl.current.controls()) {
+                    const controls = globeEl.current.controls();
+                    controls.autoRotate = true;
+                    controls.autoRotateSpeed = 0.5;
+                    controls.dampingFactor = 0.1;
+                    controls.enableDamping = true;
+                  }
+                }}
               />
             </div>
             <div>
