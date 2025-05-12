@@ -1,64 +1,85 @@
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+
+import useAlert from "../hooks/useAlert.js";
+import Alert from "../components/Alert.jsx";
 
 const Contact = () => {
   const formRef = useRef();
 
+  const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLoading(true);
 
-    try {
-      emailjs.send(
-        "service_auuhn56",
-        "template_81zg84p",
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Fatih",
+          to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "ibrahimfatihtanerbsns@gmail.com",
+          to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        "-A2G9eFIpQdPzdyQ1"
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          showAlert({
+            show: true,
+            text: "Thank you for your message 😃",
+            type: "success",
+          });
+
+          setTimeout(() => {
+            hideAlert(false);
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          }, [3000]);
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          showAlert({
+            show: true,
+            text: "I didn't receive your message 😢",
+            type: "danger",
+          });
+        }
       );
-
-      setLoading(false);
-
-      alert("Your message has been sent!");
-
-      setForm({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (err) {
-      setLoading(false);
-      alert("Something went wrong!");
-    }
   };
+
   return (
-    <section className="c-space my-20">
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
+    <section className="c-space my-20" id="contact">
+      {alert.show && <Alert {...alert} />}
+
+      <div className="relative min-h-screen flex items-center justify-center flex-col py-10">
         <img
           src="/assets/terminal.png"
-          alt="contact me"
+          alt="terminal-bg"
           className="absolute inset-0 min-h-screen"
         />
+
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg text-white-600 mt-3">
-            Whether youre lookign to build a new website
+            Whether you’re looking to build a new website, improve your existing
+            platform, or bring a unique project to life, I’m here to help.
           </p>
 
           <form
@@ -75,11 +96,12 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="John Doe"
+                placeholder="ex., John Doe"
               />
             </label>
+
             <label className="space-y-3">
-              <span className="field-label">Email</span>
+              <span className="field-label">Email address</span>
               <input
                 type="email"
                 name="email"
@@ -87,11 +109,12 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="johndoe@gmail.com"
+                placeholder="ex., johndoe@gmail.com"
               />
             </label>
+
             <label className="space-y-3">
-              <span className="field-label">Your Message</span>
+              <span className="field-label">Your message</span>
               <textarea
                 name="message"
                 value={form.message}
@@ -99,15 +122,16 @@ const Contact = () => {
                 required
                 rows={5}
                 className="field-input"
-                placeholder="Hi, I wanna give you a job..."
+                placeholder="Share your thoughts or inquiries..."
               />
             </label>
 
             <button className="field-btn" type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send MEssage"}
+              {loading ? "Sending..." : "Send Message"}
+
               <img
                 src="/assets/arrow-up.png"
-                alt="submit"
+                alt="arrow-up"
                 className="field-btn_arrow"
               />
             </button>
