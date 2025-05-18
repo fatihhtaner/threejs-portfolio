@@ -1,23 +1,40 @@
 import { useState } from "react";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import { navLinks } from "../contants";
 
-const NavItems = () => {
+import { useTranslation } from "react-i18next"; // veya başka kütüphane
+
+const NavItems = ({ t }) => {
+  const links = navLinks(t); // buraya t fonksiyonunu geçiriyoruz
+
   return (
-    <ul className="nav-ul">
-      {navLinks.map(({ id, href, name }) => (
-        <li key={id} className="nav-li">
-          <a href={href} className="nav-li_a" onClick={() => {}}>
-            {name}
-          </a>
-        </li>
-      ))}
+    <ul className="nav-ul flex items-center">
+      {links.map(({ id, href, name, type, component: Component }) => {
+        if (type === "link") {
+          return (
+            <li key={id} className="nav-li">
+              <a href={href} className="nav-li_a">
+                {name}
+              </a>
+            </li>
+          );
+        }
+        if (type === "component" && Component) {
+          return (
+            <li key={id} className="nav-li">
+              <Component />
+            </li>
+          );
+        }
+        return null;
+      })}
     </ul>
   );
 };
 
 const Navbar = () => {
+  const { t } = useTranslation(); // çeviri fonksiyonunu alıyoruz
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
@@ -31,27 +48,34 @@ const Navbar = () => {
             İbrahim Fatih Taner
           </a>
 
-          <button
-            onClick={toggleMenu}
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle menu"
-          >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              alt="toggle"
-              className="w-6 h-6"
-            />
-          </button>
+          <div className="flex items-center">
+            <button
+              onClick={toggleMenu}
+              className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+              aria-label="Toggle menu"
+            >
+              <img
+                src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+                alt="toggle"
+                className="w-6 h-6"
+              />
+            </button>
+
+            <div className="hidden sm:flex"></div>
+          </div>
 
           <nav className="sm:flex hidden">
-            <NavItems />
+            <NavItems t={t} />
           </nav>
         </div>
       </div>
 
       <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
         <nav className="p-5">
-          <NavItems />
+          <NavItems t={t} />
+          <div className="mt-4">
+            <LanguageSwitcher />
+          </div>
         </nav>
       </div>
     </header>

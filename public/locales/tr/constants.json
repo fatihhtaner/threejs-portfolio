@@ -1,0 +1,83 @@
+{
+  "navLinks": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "work": "Çalışmalar",
+    "contact": "İletişim"
+  },
+  "clientReviews": {
+    "1": {
+      "name": "Batuhan Kaya",
+      "position": "Yazılım Geliştirici",
+      "review": "Adrian ile çalışmak harika bir deneyimdi. Eski web sitemizi modern, kullanıcı dostu bir platforma dönüştürdü. Detaylara gösterdiği özen ve kaliteye olan bağlılığı eşsiz. Herhangi bir web geliştirme projesi için şiddetle tavsiye ederim."
+    },
+    "2": {
+      "name": "Mark Rogers",
+      "position": "TechGear Shop Kurucusu",
+      "review": "Adrian’ın web geliştirme konusundaki uzmanlığı gerçekten etkileyici. E-ticaret sitemiz için sağlam ve ölçeklenebilir bir çözüm sundu ve lansmandan sonra çevrimiçi satışlarımız önemli ölçüde arttı. Gerçek bir profesyonel! Harika iş."
+    },
+    "3": {
+      "name": "John Dohsas",
+      "position": "UrbanTech Proje Yöneticisi",
+      "review": "Adrian hakkında yeterince iyi şeyler söyleyemem. Karmaşık proje gereksinimlerimizi alıp sorunsuz, işlevsel bir web sitesine dönüştürdü. Problemleri çözme yetenekleri olağanüstü."
+    },
+    "4": {
+      "name": "Ether Smith",
+      "position": "BrightStar Enterprises CEO'su",
+      "review": "Adrian ile çalışmak keyifliydi. Gereksinimlerimizi mükemmel anladı ve beklentilerimizin ötesinde bir web sitesi teslim etti. Hem frontend hem backend geliştirme konusundaki yetenekleri üst düzey."
+    }
+  },
+  "projects": {
+    "pyshico": {
+      "title": "Pyshico - Fizyoterapi Uygulaması",
+      "desc": "Pyshico, hareket kısıtlılığı yaşayan hastaların fizyoterapi merkezlerine erişimindeki zorlukları azaltmak amacıyla geliştirilmiş bir mobil ve web uygulamasıdır. Uygulama, hasta ile doktor arasındaki iletişimi kolaylaştıran bir sohbet odası sunar. Ayrıca hastalar, doktorları tarafından atanan egzersizlerle ilgili video, açıklama, set ve tekrar sayısı gibi bilgilere kolayca erişebilir.",
+      "subdesc": "Web tarafında React, Redux Toolkit ve Bootstrap; mobil tarafında ise React Native, Expo ve CSS kullanılmıştır. Backend kısmı Node.js, Express.js, Socket.io ve MongoDB ile geliştirilmiştir. Physico, yüksek performans ve ölçeklenebilirlik gözetilerek tasarlanmıştır."
+    },
+    "livedoc": {
+      "title": "LiveDoc - Gerçek Zamanlı Google Docs Klonu",
+      "desc": "LiveDoc, gerçek zamanlı belge düzenlemenin yeteneklerini artıran güçlü bir işbirliği uygulamasıdır. Google Docs’un geliştirilmiş bir versiyonu olarak, milyonlarca işbirlikçiyi aynı anda destekleyerek her değişikliğin anında ve doğru şekilde yakalanmasını sağlar.",
+      "subdesc": "LiveDoc ile kullanıcılar, gecikme olmadan gerçek zamanlı olarak birlikte çalışmanın geleceğini deneyimleyebilir. Next.js ve Liveblocks’un en yeni özellikleriyle mümkün hale gelir."
+    },
+    "carepulse": {
+      "title": "CarePulse - Sağlık Yönetim Sistemi",
+      "desc": "Temel tıbbi süreçleri kolaylaştırmak için tasarlanmış yenilikçi bir sağlık platformu. Hasta kaydı, randevu planlama ve tıbbi kayıt yönetimini basitleştirerek hem sağlık hizmeti sağlayıcıları hem de hastalar için sorunsuz bir deneyim sunar.",
+      "subdesc": "Verimliliğe odaklanan CarePulse, karmaşık formlar ve SMS bildirimlerini Next.js, Appwrite, Twillio ve Sentry kullanarak operasyonel iş akışlarını geliştirir."
+    },
+    "horizon": {
+      "title": "Horizon - Online Bankacılık Platformu",
+      "desc": "Kullanıcılara merkezi bir finans yönetim panosu sunan kapsamlı bir online bankacılık platformu. Birden fazla banka hesabını bağlamayı, gerçek zamanlı işlemleri izlemeyi ve diğer kullanıcılara sorunsuz para transferi yapmayı sağlar.",
+      "subdesc": "Next.js 14, Appwrite, Dwolla ve Plaid ile geliştirilen Horizon, modern tüketicilerin ihtiyaçlarına uygun, sorunsuz ve güvenli bir bankacılık deneyimi sunar."
+    },
+    "imaginify": {
+      "title": "Imaginify - Yapay Zeka Fotoğraf Manipülasyon Uygulaması",
+      "desc": "Kullanıcıların yapay zeka teknolojisi kullanarak çarpıcı fotoğraf manipülasyonları yaratmasını sağlayan çığır açan bir SaaS uygulaması. AI destekli görüntü düzenleme, ödeme sistemi ve kredi tabanlı model gibi özelliklere sahiptir.",
+      "subdesc": "Next.js 14, Cloudinary AI, Clerk ve Stripe kullanılarak geliştirilen Imaginify, ileri teknolojiyi kullanıcı odaklı yaklaşımla birleştirir. Yan gelir veya tam teşekküllü bir iş haline getirilebilir."
+    }
+  },
+  "workExperiences": {
+    "1": {
+      "name": "Celadonsoft",
+      "position": "Yazılım Geliştirici",
+      "duration": "Ekim 2024 - Nisan 2025",
+      "title": "Müşteri ihtiyaçlarına göre React, React Native, TypeScript ve Redux gibi teknolojiler kullanarak uygulamalar geliştirdim. Bu rolde, performans, sürdürülebilirlik ve ölçeklenebilirliği artırmak için SellItBack uygulamasını yeniden yapılandırdık. Ayrıca React kullanarak 12Reps projesinin admin panelini geliştirdim."
+    },
+    "2": {
+      "name": "Erciyes Anadolu Holding",
+      "position": "Genç Yetenek",
+      "duration": "Temmuz 2024 - Eylül 2024",
+      "title": "Genç Yetenek programı kapsamında, holding ve grup şirketlerinin yama dağıtım hizmetini Desktop Central'dan Microsoft Intune'a taşıdım. Ayrıca sanallaştırma ve"
+    },
+    "3": {
+      "name": "Celadonsoft",
+      "position": "Yazılım Geliştirici Stajyeri",
+      "duration": "Ekim 2023 - Nisan 2024",
+      "title": "Staj süresince Node.js, React ve MongoDB kullanarak MERN tabanlı bir Kütüphane (BookStore) projesi geliştirdim. Ayrıca React ile PragueCoolPass web sitesinin klonunu oluşturdum ve 3D küp üzerinde oynanabilen online TicTacToe oyunu yaptım."
+    },
+    "4": {
+      "name": "Market Calculus",
+      "position": "Frontend Developer Stajyeri",
+      "duration": "Ağustos 2023 - Eylül 2023",
+      "title": "Staj süresince versiyon kontrol sistemleri, TypeScript ve Jira teknolojilerini öğrendim. Daha sonra devam eden bir React projesine katıldım ve şirkette bana verilen sürükle-bırak özelliklerini üretim ortamına entegre ettim."
+    }
+  }
+}

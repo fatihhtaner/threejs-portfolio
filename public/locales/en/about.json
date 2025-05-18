@@ -1,0 +1,15 @@
+{
+  "greeting": "Hi I'm Fatih",
+  "experience": "With 12 years of experience",
+  "techStack": "Tech Stack",
+  "techStackDesc": "I specialize in JavaScript/TypeScript with a focus on React",
+  "remoteWorkTitle": "I work remotely across most timezones.",
+  "remoteWorkDesc": "I'm based in Turkey, with remote work available.",
+  "passionTitle": "My Passion for Coding",
+  "passionDesc": "I love solving problems and building things through code.",
+  "contactMe": "Contact me",
+  "email": "ibrahimfatihtaner@gmail.com",
+  "copySuccess": "Copied to clipboard!",
+  "contactBtn": "Contact Me",
+  "globeLabel": "I'm here!"
+}

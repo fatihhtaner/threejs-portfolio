@@ -1,28 +1,40 @@
-import React, { Suspense, useState } from "react";
-import { myProjects } from "../contants";
+import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
+import { useTranslation } from "react-i18next";
 import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
-
-const projectCount = myProjects.length;
+import { myProjects } from "../contants";
 
 const Projects = () => {
+  const { t } = useTranslation("Projects");
+  const [projects, setProjects] = useState([]);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const currentProject = myProjects[selectedProjectIndex];
+
+  useEffect(() => {
+    setProjects(myProjects(t));
+  }, [t]);
+
+  const currentProject = projects[selectedProjectIndex] || {};
+  const projectCount = projects.length;
 
   const handleNavigation = (direction) => {
-    setSelectedProjectIndex((prev) => {
-      if (direction === "previous") {
-        return prev === 0 ? projectCount - 1 : prev - 1;
-      } else {
-        return prev === projectCount - 1 ? 0 : prev + 1;
-      }
-    });
+    setSelectedProjectIndex((prev) =>
+      direction === "previous"
+        ? prev === 0
+          ? projectCount - 1
+          : prev - 1
+        : prev === projectCount - 1
+        ? 0
+        : prev + 1
+    );
   };
+
+  if (projects.length === 0) return null;
+
   return (
     <section className="c-space my-20" id="projects">
-      <p className="head-text">My Work</p>
+      <p className="head-text">{t("title")}</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -55,7 +67,7 @@ const Projects = () => {
 
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
-              {currentProject.tags.map((tag, index) => (
+              {currentProject.tags?.map((tag, index) => (
                 <div key={index} className="tech-logo">
                   <img src={tag.path} alt={tag.name} />
                 </div>
@@ -68,7 +80,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <p>Check Live Site</p>
+              <p>{t("checkSite")}</p>
               <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
             </a>
           </div>
@@ -80,7 +92,7 @@ const Projects = () => {
             >
               <img
                 src="/assets/left-arrow.png"
-                alt="right arrow"
+                alt="left arrow"
                 className="w-4 h-4"
               />
             </button>
