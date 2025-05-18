@@ -1,24 +1,31 @@
-export const navLinks = [
+import LanguageSwitcher from "../components/LanguageSwitcher";
+
+export const navLinks = (t) => [
   {
     id: 1,
-    name: "Home",
+    name: t("navLinks.home", { ns: "constants" }),
     href: "#home",
+    type: "link",
   },
   {
     id: 2,
-    name: "About",
+    name: t("navLinks.about", { ns: "constants" }),
     href: "#about",
+    type: "link",
   },
   {
     id: 3,
-    name: "Work",
+    name: t("navLinks.work", { ns: "constants" }),
     href: "#work",
+    type: "link",
   },
   {
     id: 4,
-    name: "Contact",
+    name: t("navLinks.contact", { ns: "constants" }),
     href: "#contact",
+    type: "link",
   },
+  { id: 5, type: "component", component: LanguageSwitcher },
 ];
 
 export const clientReviews = [
@@ -56,12 +63,11 @@ export const clientReviews = [
   },
 ];
 
-export const myProjects = [
+export const myProjects = (t) => [
   {
-    title: "Podcastr - AI Podcast Platform",
-    desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
-    subdesc:
-      "Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.",
+    title: t("projects.pyshico.title", { ns: "constants" }),
+    desc: t("projects.pyshico.desc", { ns: "constants" }),
+    subdesc: t("projects.pyshico.subdesc", { ns: "constants" }),
     href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
     texture: "/textures/project/project1.mp4",
     logo: "/assets/project-logo1.png",
@@ -95,10 +101,9 @@ export const myProjects = [
     ],
   },
   {
-    title: "LiveDoc - Real-Time Google Docs Clone",
-    desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
-    subdesc:
-      "With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.",
+    title: t("projects.livedoc.title"),
+    desc: t("projects.livedoc.desc"),
+    subdesc: t("projects.livedoc.subdesc"),
     href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
     texture: "/textures/project/project2.mp4",
     logo: "/assets/project-logo2.png",
@@ -132,10 +137,9 @@ export const myProjects = [
     ],
   },
   {
-    title: "CarePulse - Health Management System",
-    desc: "An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.",
-    subdesc:
-      "With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.",
+    title: t("projects.carepulse.title"),
+    desc: t("projects.carepulse.desc"),
+    subdesc: t("projects.carepulse.subdesc"),
     href: "https://www.youtube.com/watch?v=lEflo_sc82g",
     texture: "/textures/project/project3.mp4",
     logo: "/assets/project-logo3.png",
@@ -171,10 +175,9 @@ export const myProjects = [
     ],
   },
   {
-    title: "Horizon - Online Banking Platform",
-    desc: "Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.",
-    subdesc:
-      "Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.",
+    title: t("projects.horizon.title"),
+    desc: t("projects.horizon.desc"),
+    subdesc: t("projects.horizon.subdesc"),
     href: "https://www.youtube.com/watch?v=PuOVqP_cjkE",
     texture: "/textures/project/project4.mp4",
     logo: "/assets/project-logo4.png",
@@ -208,10 +211,9 @@ export const myProjects = [
     ],
   },
   {
-    title: "Imaginify - AI Photo Manipulation App",
-    desc: "Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.",
-    subdesc:
-      "Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+    title: t("projects.imaginify.title"),
+    desc: t("projects.imaginify.desc"),
+    subdesc: t("projects.imaginify.subdesc"),
     href: "https://www.youtube.com/watch?v=Ahwoks_dawU",
     texture: "/textures/project/project5.mp4",
     logo: "/assets/project-logo5.png",
@@ -286,9 +288,9 @@ export const workExperiences = [
     id: 1,
     name: "Celadonsoft",
     pos: "Software Developer",
-    duration: "2022 - Present",
+    duration: "October 2024 - April 2025",
     title:
-      "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+      "I developed applications based on customer needs using technologies such as React, React Native, TypeScript, and Redux. In this role, we also refactored the SellItBack application to improve performance, maintainability, and scalability. Additionally, I developed the admin panel of the 12Reps project using React.",
     icon: "/assets/celadon.png",
     animation: "victory",
   },
@@ -296,9 +298,9 @@ export const workExperiences = [
     id: 2,
     name: "Erciyes Anadolu Holding",
     pos: "Youth Talent",
-    duration: "2020 - 2022",
+    duration: "July 2024 - September 2024",
     title:
-      "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+      "As part of the Young Talent program, I migrated the patch distribution service of the holding and its group companies from Desktop Central to Microsoft Intune. I also gained knowledge in virtualization and",
     icon: "/assets/erciyes.jpg",
     animation: "clapping",
   },
@@ -306,9 +308,9 @@ export const workExperiences = [
     id: 3,
     name: "Celadonsoft",
     pos: "Software Developer Intern",
-    duration: "2019 - 2020",
+    duration: "October 2023 - April 2024",
     title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
+      "During my internship, I developed a MERN-based Library (BookStore) project using Node.js, React, and MongoDB. I also created a clone of the PragueCoolPass website with React, and built an online TicTacToe game playable on a 3D cube.",
     icon: "/assets/celadon.png",
     animation: "salute",
   },
@@ -316,9 +318,9 @@ export const workExperiences = [
     id: 3,
     name: "Market Calculus",
     pos: "Frontend Developer Intern",
-    duration: "2019 - 2020",
+    duration: "August 2023 - September 2023",
     title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
+      "During my internship, I learned version control systems, TypeScript, and Jira technologies. Later, I joined an ongoing React project and integrated the drag-and-drop features assigned to me into the company’s production environment.",
     icon: "/assets/marketcalculus_logo.jpg",
     animation: "salute",
   },
