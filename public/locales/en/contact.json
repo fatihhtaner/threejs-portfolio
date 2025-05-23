@@ -1,0 +1,22 @@
+{
+  "title": "Let's talk",
+  "description": "Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to life, I’m here to help.",
+  "labels": {
+    "name": "Full Name",
+    "email": "Email address",
+    "message": "Your message"
+  },
+  "placeholders": {
+    "name": "ex., John Doe",
+    "email": "ex., johndoe@gmail.com",
+    "message": "Share your thoughts or inquiries..."
+  },
+  "buttons": {
+    "send": "Send Message",
+    "sending": "Sending..."
+  },
+  "alerts": {
+    "success": "Thank you for your message 😃",
+    "error": "I didn't receive your message 😢"
+  }
+}

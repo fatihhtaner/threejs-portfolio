@@ -37,9 +37,18 @@ const Developer = ({ animationName = "idle", ...props }) => {
   );
 
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.5).play();
-    return () => actions[animationName].fadeOut(0.5);
-  }, [animationName]);
+    // Actions'ın yüklenip yüklenmediğini kontrol et
+    if (actions && actions[animationName]) {
+      actions[animationName].reset().fadeIn(0.5).play();
+
+      return () => {
+        // Cleanup sırasında da kontrol et
+        if (actions[animationName]) {
+          actions[animationName].fadeOut(0.5);
+        }
+      };
+    }
+  }, [animationName, actions]);
 
   return (
     <group ref={group} {...props} dispose={null}>

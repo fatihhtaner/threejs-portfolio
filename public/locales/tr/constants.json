@@ -1,8 +1,9 @@
 {
   "navLinks": {
+    "title": "İbrahim Fatih Taner",
     "home": "Ana Sayfa",
     "about": "Hakkımda",
-    "work": "Çalışmalar",
+    "work": "Projeler",
     "contact": "İletişim"
   },
   "clientReviews": {
@@ -33,10 +34,10 @@
       "desc": "Pyshico, hareket kısıtlılığı yaşayan hastaların fizyoterapi merkezlerine erişimindeki zorlukları azaltmak amacıyla geliştirilmiş bir mobil ve web uygulamasıdır. Uygulama, hasta ile doktor arasındaki iletişimi kolaylaştıran bir sohbet odası sunar. Ayrıca hastalar, doktorları tarafından atanan egzersizlerle ilgili video, açıklama, set ve tekrar sayısı gibi bilgilere kolayca erişebilir.",
       "subdesc": "Web tarafında React, Redux Toolkit ve Bootstrap; mobil tarafında ise React Native, Expo ve CSS kullanılmıştır. Backend kısmı Node.js, Express.js, Socket.io ve MongoDB ile geliştirilmiştir. Physico, yüksek performans ve ölçeklenebilirlik gözetilerek tasarlanmıştır."
     },
-    "livedoc": {
-      "title": "LiveDoc - Gerçek Zamanlı Google Docs Klonu",
-      "desc": "LiveDoc, gerçek zamanlı belge düzenlemenin yeteneklerini artıran güçlü bir işbirliği uygulamasıdır. Google Docs’un geliştirilmiş bir versiyonu olarak, milyonlarca işbirlikçiyi aynı anda destekleyerek her değişikliğin anında ve doğru şekilde yakalanmasını sağlar.",
-      "subdesc": "LiveDoc ile kullanıcılar, gecikme olmadan gerçek zamanlı olarak birlikte çalışmanın geleceğini deneyimleyebilir. Next.js ve Liveblocks’un en yeni özellikleriyle mümkün hale gelir."
+    "rocket": {
+      "title": "Rocket - Kripto Para Platformu",
+      "desc": "Rocket, kullanıcıların kripto para alım satımı yapabileceği modern, güvenli ve kullanıcı dostu bir borsa platformudur. Gerçek zamanlı grafik takibi, favorilere ekleme, çoklu dil desteği ve Firebase tabanlı hesap yönetimiyle dijital varlıklarınızı yönetmenin en pratik yoludur.",
+      "subdesc": "Next.js, TypeScript, Firebase ve i18n teknolojileriyle geliştirilen Rocket, hem yeni başlayanlar hem de deneyimli yatırımcılar için optimize edilmiştir. Kripto piyasasını keşfet, yatırım yap ve portföyünü anlık olarak takip et!"
     },
     "carepulse": {
       "title": "CarePulse - Sağlık Yönetim Sistemi",
