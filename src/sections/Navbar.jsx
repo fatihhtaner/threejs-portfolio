@@ -2,10 +2,10 @@ import { useState } from "react";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { navLinks } from "../contants";
 
-import { useTranslation } from "react-i18next"; // veya başka kütüphane
+import { useTranslation } from "react-i18next";
 
 const NavItems = ({ t }) => {
-  const links = navLinks(t); // buraya t fonksiyonunu geçiriyoruz
+  const links = navLinks(t);
 
   return (
     <ul className="nav-ul flex items-center">
@@ -33,7 +33,7 @@ const NavItems = ({ t }) => {
 };
 
 const Navbar = () => {
-  const { t } = useTranslation(); // çeviri fonksiyonunu alıyoruz
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
 

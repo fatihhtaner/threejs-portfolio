@@ -1,15 +1,15 @@
 {
   "greeting": "Merhaba, ben Fatih",
-  "experience": "12 yıllık deneyimle",
-  "techStack": "Teknoloji Yığını",
-  "techStackDesc": "React odaklı JavaScript/TypeScript konusunda uzmanım",
-  "remoteWorkTitle": "Çoğu zaman diliminde uzaktan çalışıyorum.",
-  "remoteWorkDesc": "Türkiye'de yaşıyorum, uzaktan çalışmaya açığım.",
+  "experience": "Yazılım yolculuğumda, merak ve tutku ile öğreniyor ve projeler geliştiriyorum.",
+  "techStack": "Kullandığım Teknolojiler",
+  "techStackDesc": "Özellikle React ile JavaScript/TypeScript üzerine yoğunlaşıyorum.",
+  "remoteWorkTitle": "Uzaktan Çalışmaya Açığım",
+  "remoteWorkDesc": "Türkiye'deyim ve uzaktan projelerde çalışmaya hazırım.",
   "passionTitle": "Kodlama Tutkum",
-  "passionDesc": "Problemleri çözmeyi ve kod ile bir şeyler inşa etmeyi seviyorum.",
+  "passionDesc": "Kod yazarak bir şeyler üretmek ve problemleri çözmek benim için keyifli.",
   "contactMe": "Benimle iletişime geç",
   "email": "ibrahimfatihtaner@gmail.com",
   "copySuccess": "Panoya kopyalandı!",
-  "contactBtn": "Bana Ulaşın",
+  "contactBtn": "İletişime Geç",
   "globeLabel": "Buradayım!"
 }

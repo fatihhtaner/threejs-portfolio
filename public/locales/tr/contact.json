@@ -1,0 +1,22 @@
+{
+  "title": "Bana ulaş",
+  "description": "Yeni bir web sitesi yapmak, mevcut platformunu geliştirmek ya da benzersiz bir projeyi hayata geçirmek istiyorsan, yardımcı olmak için buradayım.",
+  "labels": {
+    "name": "Ad Soyad",
+    "email": "E-posta adresi",
+    "message": "Mesajın"
+  },
+  "placeholders": {
+    "name": "örneğin, İsim Soyisim",
+    "email": "örneğin, isimsoyisim@example.com",
+    "message": "Düşüncelerini ya da sorularını paylaş..."
+  },
+  "buttons": {
+    "send": "Mesaj Gönder",
+    "sending": "Gönderiliyor..."
+  },
+  "alerts": {
+    "success": "Mesajın için teşekkürler 😃",
+    "error": "Mesajını alamadım 😢"
+  }
+}

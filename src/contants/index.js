@@ -68,11 +68,11 @@ export const myProjects = (t) => [
     title: t("projects.pyshico.title", { ns: "constants" }),
     desc: t("projects.pyshico.desc", { ns: "constants" }),
     subdesc: t("projects.pyshico.subdesc", { ns: "constants" }),
-    href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
-    texture: "/textures/project/project1.mp4",
-    logo: "/assets/project-logo1.png",
+    href: "https://onurkaygn.github.io/physicohealth/",
+    texture: "/textures/project/physico.mp4",
+    logo: "/assets/physico2.png",
     logoStyle: {
-      backgroundColor: "#2A1816",
+      backgroundColor: "#c1ff72",
       border: "0.2px solid #36201D",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },
@@ -85,8 +85,8 @@ export const myProjects = (t) => [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "BootStrap",
+        path: "assets/bootstrap.png",
       },
       {
         id: 3,
@@ -95,17 +95,27 @@ export const myProjects = (t) => [
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "React Native",
+        path: "/assets/react-native.svg",
+      },
+      {
+        id: 5,
+        name: "Node.js",
+        path: "/assets/nodejs.png",
+      },
+      {
+        id: 6,
+        name: "MongoDB",
+        path: "/assets/mongodb.png",
       },
     ],
   },
   {
-    title: t("projects.livedoc.title"),
-    desc: t("projects.livedoc.desc"),
-    subdesc: t("projects.livedoc.subdesc"),
-    href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
-    texture: "/textures/project/project2.mp4",
+    title: t("projects.rocket.title", { ns: "constants" }),
+    desc: t("projects.rocket.desc", { ns: "constants" }),
+    subdesc: t("projects.rocket.subdesc", { ns: "constants" }),
+    href: "https://crypto-exchange-roan-nu.vercel.app/",
+    texture: "/textures/project/crypto.mp4",
     logo: "/assets/project-logo2.png",
     logoStyle: {
       backgroundColor: "#13202F",
@@ -116,13 +126,13 @@ export const myProjects = (t) => [
     tags: [
       {
         id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
+        name: "Next.js",
+        path: "/assets/nextjs.png",
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "BootStrap",
+        path: "assets/bootstrap.png",
       },
       {
         id: 3,
@@ -131,8 +141,8 @@ export const myProjects = (t) => [
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "Firebase",
+        path: "/assets/firebase.svg",
       },
     ],
   },
@@ -151,78 +161,6 @@ export const myProjects = (t) => [
       boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
     },
     spotlight: "/assets/spotlight3.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
-    title: t("projects.horizon.title"),
-    desc: t("projects.horizon.desc"),
-    subdesc: t("projects.horizon.subdesc"),
-    href: "https://www.youtube.com/watch?v=PuOVqP_cjkE",
-    texture: "/textures/project/project4.mp4",
-    logo: "/assets/project-logo4.png",
-    logoStyle: {
-      backgroundColor: "#0E1F38",
-      border: "0.2px solid #0E2D58",
-      boxShadow: "0px 0px 60px 0px #2F67B64D",
-    },
-    spotlight: "/assets/spotlight4.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
-    title: t("projects.imaginify.title"),
-    desc: t("projects.imaginify.desc"),
-    subdesc: t("projects.imaginify.subdesc"),
-    href: "https://www.youtube.com/watch?v=Ahwoks_dawU",
-    texture: "/textures/project/project5.mp4",
-    logo: "/assets/project-logo5.png",
-    logoStyle: {
-      backgroundColor: "#1C1A43",
-      border: "0.2px solid #252262",
-      boxShadow: "0px 0px 60px 0px #635BFF4D",
-    },
-    spotlight: "/assets/spotlight5.png",
     tags: [
       {
         id: 1,

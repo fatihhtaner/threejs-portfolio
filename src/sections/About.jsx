@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t, i18n } = useTranslation("about");
+  const { t } = useTranslation("about");
   const [hasCopied, setHasCopied] = useState(false);
   const globeEl = useRef();
 
@@ -39,31 +39,8 @@ const About = () => {
     };
   }, []);
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
   return (
     <section className="c-space my-20" id="about">
-      <div className="flex justify-end mb-4 space-x-2">
-        <button
-          onClick={() => changeLanguage("tr")}
-          className={`px-3 py-1 rounded ${
-            i18n.language === "tr" ? "bg-blue-600 text-white" : "bg-gray-200"
-          }`}
-        >
-          TR
-        </button>
-        <button
-          onClick={() => changeLanguage("en")}
-          className={`px-3 py-1 rounded ${
-            i18n.language === "en" ? "bg-blue-600 text-white" : "bg-gray-200"
-          }`}
-        >
-          EN
-        </button>
-      </div>
-
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
@@ -79,9 +56,9 @@ const About = () => {
           </div>
         </div>
         <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container items-center">
             <img
-              src="/assets/grid2.png"
+              src="/assets/Başlıksız-1 (1).png"
               alt="grid-2"
               className="w-full sm:w-[276px] h-fit object-contain"
             />
