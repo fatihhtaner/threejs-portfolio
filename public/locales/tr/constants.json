@@ -4,29 +4,8 @@
     "home": "Ana Sayfa",
     "about": "Hakkımda",
     "work": "Projeler",
+    "exp": "Deneyim",
     "contact": "İletişim"
-  },
-  "clientReviews": {
-    "1": {
-      "name": "Batuhan Kaya",
-      "position": "Yazılım Geliştirici",
-      "review": "Adrian ile çalışmak harika bir deneyimdi. Eski web sitemizi modern, kullanıcı dostu bir platforma dönüştürdü. Detaylara gösterdiği özen ve kaliteye olan bağlılığı eşsiz. Herhangi bir web geliştirme projesi için şiddetle tavsiye ederim."
-    },
-    "2": {
-      "name": "Mark Rogers",
-      "position": "TechGear Shop Kurucusu",
-      "review": "Adrian’ın web geliştirme konusundaki uzmanlığı gerçekten etkileyici. E-ticaret sitemiz için sağlam ve ölçeklenebilir bir çözüm sundu ve lansmandan sonra çevrimiçi satışlarımız önemli ölçüde arttı. Gerçek bir profesyonel! Harika iş."
-    },
-    "3": {
-      "name": "John Dohsas",
-      "position": "UrbanTech Proje Yöneticisi",
-      "review": "Adrian hakkında yeterince iyi şeyler söyleyemem. Karmaşık proje gereksinimlerimizi alıp sorunsuz, işlevsel bir web sitesine dönüştürdü. Problemleri çözme yetenekleri olağanüstü."
-    },
-    "4": {
-      "name": "Ether Smith",
-      "position": "BrightStar Enterprises CEO'su",
-      "review": "Adrian ile çalışmak keyifliydi. Gereksinimlerimizi mükemmel anladı ve beklentilerimizin ötesinde bir web sitesi teslim etti. Hem frontend hem backend geliştirme konusundaki yetenekleri üst düzey."
-    }
   },
   "projects": {
     "pyshico": {
@@ -39,20 +18,10 @@
       "desc": "Rocket, kullanıcıların kripto para alım satımı yapabileceği modern, güvenli ve kullanıcı dostu bir borsa platformudur. Gerçek zamanlı grafik takibi, favorilere ekleme, çoklu dil desteği ve Firebase tabanlı hesap yönetimiyle dijital varlıklarınızı yönetmenin en pratik yoludur.",
       "subdesc": "Next.js, TypeScript, Firebase ve i18n teknolojileriyle geliştirilen Rocket, hem yeni başlayanlar hem de deneyimli yatırımcılar için optimize edilmiştir. Kripto piyasasını keşfet, yatırım yap ve portföyünü anlık olarak takip et!"
     },
-    "carepulse": {
-      "title": "CarePulse - Sağlık Yönetim Sistemi",
-      "desc": "Temel tıbbi süreçleri kolaylaştırmak için tasarlanmış yenilikçi bir sağlık platformu. Hasta kaydı, randevu planlama ve tıbbi kayıt yönetimini basitleştirerek hem sağlık hizmeti sağlayıcıları hem de hastalar için sorunsuz bir deneyim sunar.",
-      "subdesc": "Verimliliğe odaklanan CarePulse, karmaşık formlar ve SMS bildirimlerini Next.js, Appwrite, Twillio ve Sentry kullanarak operasyonel iş akışlarını geliştirir."
-    },
-    "horizon": {
-      "title": "Horizon - Online Bankacılık Platformu",
-      "desc": "Kullanıcılara merkezi bir finans yönetim panosu sunan kapsamlı bir online bankacılık platformu. Birden fazla banka hesabını bağlamayı, gerçek zamanlı işlemleri izlemeyi ve diğer kullanıcılara sorunsuz para transferi yapmayı sağlar.",
-      "subdesc": "Next.js 14, Appwrite, Dwolla ve Plaid ile geliştirilen Horizon, modern tüketicilerin ihtiyaçlarına uygun, sorunsuz ve güvenli bir bankacılık deneyimi sunar."
-    },
-    "imaginify": {
-      "title": "Imaginify - Yapay Zeka Fotoğraf Manipülasyon Uygulaması",
-      "desc": "Kullanıcıların yapay zeka teknolojisi kullanarak çarpıcı fotoğraf manipülasyonları yaratmasını sağlayan çığır açan bir SaaS uygulaması. AI destekli görüntü düzenleme, ödeme sistemi ve kredi tabanlı model gibi özelliklere sahiptir.",
-      "subdesc": "Next.js 14, Cloudinary AI, Clerk ve Stripe kullanılarak geliştirilen Imaginify, ileri teknolojiyi kullanıcı odaklı yaklaşımla birleştirir. Yan gelir veya tam teşekküllü bir iş haline getirilebilir."
+    "tictactoe": {
+      "title": "TicTacTerror - 3D Multiplayer Zeka Oyunu",
+      "desc": "Klasik tic-tac-toe oyununu yepyeni bir boyuta taşıyan yenilikçi bir platform. 3 boyutlu bir küp üzerinde geçen bu oyun, gerçek zamanlı çok oyunculu desteğiyle strateji ve eğlenceyi bir araya getiriyor.",
+      "subdesc": "Oyuncular, sıradan hamlelerin ötesine geçerek bomba jokeriyle rakibin satır ve sütunlarını sıfırlayabiliyor. Her hamle geçmişe kaydediliyor ve kullanıcılar bu geçmişte gezinebilerek oyunun belirli anlarını tekrar izleyebiliyor. Telefon numarası ile OTP doğrulamalı kullanıcı kaydı, kazanç-kayıp istatistiklerine göre dinamik sıralanan bir liderlik tablosu ve oda numarasıyla eşli oyun sistemiyle eksiksiz bir sosyal oyun deneyimi sunuyor. React, JavaScript ve Firebase teknolojileri kullanılarak geliştirildi."
     }
   },
   "workExperiences": {

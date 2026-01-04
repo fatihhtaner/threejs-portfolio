@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { TR, GB } from "country-flag-icons/react/3x2";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -12,9 +13,11 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="text-sm font-medium text-neutral-400 hover:text-white transition-colors ml-4"
+      className="flex items-center text-sm font-medium text-neutral-400 hover:text-white transition-colors ml-4 group"
     >
-      {currentLang === "en" ? "TR 🇹🇷" : "EN 🇬🇧"}
+      <div className="w-6 h-4 group-hover:scale-110 transition-transform duration-200 rounded-sm overflow-hidden">
+        {currentLang === "en" ? <TR /> : <GB />}
+      </div>
     </button>
   );
 };

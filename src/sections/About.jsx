@@ -83,11 +83,11 @@ const About = () => {
                 bumpImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.jpg"
                 labelsData={[
                   {
-                    lat: 40,
-                    lng: -100,
+                    lat: 37.1759,
+                    lng: 33.2287,
                     text: t("globeLabel"),
                     color: "white",
-                    size: 100,
+                    size: 1500,
                   },
                 ]}
                 controllerType="orbit"
@@ -106,11 +106,13 @@ const About = () => {
             <div>
               <p className="grid-headtext">{t("remoteWorkTitle")}</p>
               <p className="grid-subtext">{t("remoteWorkDesc")}</p>
-              <Button
-                name={t("contactBtn")}
-                isBeam
-                containerClass="w-full mt-10"
-              />
+              <a href="#contact" className="w-fit">
+                <Button
+                  name={t("contactBtn")}
+                  isBeam
+                  containerClass="w-full mt-10"
+                />
+              </a>
             </div>
           </div>
         </div>

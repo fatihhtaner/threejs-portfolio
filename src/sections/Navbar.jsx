@@ -45,7 +45,7 @@ const Navbar = () => {
             href="/"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
           >
-            İbrahim Fatih Taner
+            Ibrahim Fatih Taner
           </a>
 
           <div className="flex items-center">

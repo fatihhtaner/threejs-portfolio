@@ -10,7 +10,7 @@ i18n
   .init({
     fallbackLng: "tr",
     debug: true,
-    ns: ["about", "common", "constants", "hero", "contact"],
+    ns: ["about", "constants", "hero", "contact", "experience"],
     defaultNS: "constants",
     detection: {
       order: ["querystring", "cookie", "localStorage", "navigator", "htmlTag"],

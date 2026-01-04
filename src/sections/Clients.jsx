@@ -1,4 +1,3 @@
-import React from "react";
 import { clientReviews } from "../contants";
 
 const Clients = () => {

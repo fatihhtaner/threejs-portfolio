@@ -5,9 +5,10 @@ import { useTranslation } from "react-i18next";
 import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
 import { myProjects } from "../contants";
+import CanvasErrorBoundary from "../components/CanvasErrorBoundary";
 
 const Projects = () => {
-  const { t } = useTranslation("Projects");
+  const { t } = useTranslation("projects");
   const [projects, setProjects] = useState([]);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
@@ -110,18 +111,20 @@ const Projects = () => {
         </div>
 
         <div className="border border-black-200 bg-black-400 rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={Math.PI / 2} />
-            <directionalLight position={[10, 10, 5]} />
-            <Center>
-              <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
-              </Suspense>
-            </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-          </Canvas>
+          <CanvasErrorBoundary>
+            <Canvas>
+              <ambientLight intensity={Math.PI / 2} />
+              <directionalLight position={[10, 10, 5]} />
+              <Center>
+                <Suspense fallback={<CanvasLoader />}>
+                  <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                    <DemoComputer texture={currentProject.texture} />
+                  </group>
+                </Suspense>
+              </Center>
+              <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+            </Canvas>
+          </CanvasErrorBoundary>
         </div>
       </div>
     </section>
