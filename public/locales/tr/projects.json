@@ -5,8 +5,8 @@
   "next": "Sonraki proje",
   "items": {
     "physico": {
-      "title": "Pyshico - Fizyoterapi Uygulaması",
-      "desc": "Pyshico, hareket kısıtlılığı yaşayan hastaların fizyoterapi merkezlerine erişimindeki zorlukları azaltmak amacıyla geliştirilmiş bir mobil ve web uygulamasıdır. Uygulama, hasta ile doktor arasındaki iletişimi kolaylaştıran bir sohbet odası sunar. Ayrıca hastalar, doktorları tarafından atanan egzersizlerle ilgili video, açıklama, set ve tekrar sayısı gibi bilgilere kolayca erişebilir.",
+      "title": "Physico - Fizyoterapi Uygulaması",
+      "desc": "Physico, hareket kısıtlılığı yaşayan hastaların fizyoterapi merkezlerine erişimindeki zorlukları azaltmak amacıyla geliştirilmiş bir mobil ve web uygulamasıdır. Uygulama, hasta ile doktor arasındaki iletişimi kolaylaştıran bir sohbet odası sunar. Ayrıca hastalar, doktorları tarafından atanan egzersizlerle ilgili video, açıklama, set ve tekrar sayısı gibi bilgilere kolayca erişebilir.",
       "subdesc": "Web tarafında React, Redux Toolkit ve Bootstrap; mobil tarafında ise React Native, Expo ve CSS kullanılmıştır. Backend kısmı Node.js, Express.js, Socket.io ve MongoDB ile geliştirilmiştir. Physico, yüksek performans ve ölçeklenebilirlik gözetilerek tasarlanmıştır."
     },
     "rocket": {

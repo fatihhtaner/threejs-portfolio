@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGUAGES } from "../i18n";
+import { trackEvent } from "../lib/analytics";
 
 const LanguageSwitcher = ({ className = "" }) => {
   const { t, i18n } = useTranslation();
@@ -16,7 +17,11 @@ const LanguageSwitcher = ({ className = "" }) => {
         <button
           key={lng}
           type="button"
-          onClick={() => i18n.changeLanguage(lng)}
+          onClick={() => {
+            if (lng === currentLang) return;
+            i18n.changeLanguage(lng);
+            trackEvent("language_change", { language: lng });
+          }}
           aria-pressed={currentLang === lng}
           className={`lang-switcher_btn ${
             currentLang === lng ? "lang-switcher_btn--active" : ""

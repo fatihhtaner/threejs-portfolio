@@ -4,6 +4,7 @@ import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 import { useTranslation } from "react-i18next";
 import { personalInfo } from "../constants";
+import { trackEvent } from "../lib/analytics";
 
 const Contact = () => {
   const { t } = useTranslation("contact");
@@ -37,6 +38,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          trackEvent("contact_submit");
           showAlert({
             show: true,
             text: t("alerts.success"),

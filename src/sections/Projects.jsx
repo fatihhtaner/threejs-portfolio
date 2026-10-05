@@ -6,6 +6,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
 import { myProjects } from "../constants";
 import useInView from "../hooks/useInView";
+import { trackEvent } from "../lib/analytics";
 import CanvasErrorBoundary from "../components/CanvasErrorBoundary";
 
 const Projects = () => {
@@ -76,6 +77,9 @@ const Projects = () => {
               href={currentProject.href}
               target="_blank"
               rel="noreferrer"
+              onClick={() =>
+                trackEvent("project_visit", { project: currentProject.key })
+              }
             >
               <p>{t("checkSite")}</p>
               <img src="/assets/arrow-up.png" className="w-3 h-3" alt="" />
