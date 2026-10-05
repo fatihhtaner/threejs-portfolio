@@ -6,6 +6,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
 import { myProjects } from "../constants";
 import useInView from "../hooks/useInView";
+import CanvasErrorBoundary from "../components/CanvasErrorBoundary";
 
 const Projects = () => {
   const { t } = useTranslation("projects");
@@ -107,25 +108,27 @@ const Projects = () => {
           className="border border-black-200 bg-black-400 rounded-lg h-96 md:h-full"
         >
           {hasBeenInView && (
-            <Canvas dpr={[1, 1.5]} frameloop={inView ? "always" : "never"}>
-              <ambientLight intensity={Math.PI / 2} />
-              <directionalLight position={[10, 10, 5]} />
-              <Center>
-                <Suspense fallback={<CanvasLoader />}>
-                  <group
-                    scale={2}
-                    position={[0, -3, 0]}
-                    rotation={[0, -0.1, 0]}
-                  >
-                    <DemoComputer
-                      texture={currentProject.texture}
-                      paused={!inView}
-                    />
-                  </group>
-                </Suspense>
-              </Center>
-              <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-            </Canvas>
+            <CanvasErrorBoundary>
+              <Canvas dpr={[1, 1.5]} frameloop={inView ? "always" : "never"}>
+                <ambientLight intensity={Math.PI / 2} />
+                <directionalLight position={[10, 10, 5]} />
+                <Center>
+                  <Suspense fallback={<CanvasLoader />}>
+                    <group
+                      scale={2}
+                      position={[0, -3, 0]}
+                      rotation={[0, -0.1, 0]}
+                    >
+                      <DemoComputer
+                        texture={currentProject.texture}
+                        paused={!inView}
+                      />
+                    </group>
+                  </Suspense>
+                </Center>
+                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+              </Canvas>
+            </CanvasErrorBoundary>
           )}
         </div>
       </div>

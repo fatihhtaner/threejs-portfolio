@@ -20,7 +20,6 @@ i18n
       "hero",
       "about",
       "projects",
-      "clients",
       "experience",
       "contact",
     ],

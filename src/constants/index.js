@@ -1,10 +1,11 @@
 export const personalInfo = {
-  name: "İbrahim Fatih Taner",
+  name: "Ibrahim Fatih Taner",
   email: "ibrahimfatihtaner@gmail.com",
   github: "https://github.com/fatihhtaner",
-  linkedin: "https://www.linkedin.com/in/fatih-taner",
+  linkedin: "https://www.linkedin.com/in/fatih-taner/",
+  gitlab: "https://gitlab.com/users/ibrahimfatihtaner/projects",
   // Shown on the globe in the About section
-  location: { lat: 39, lng: 35 },
+  location: { lat: 37.1759, lng: 33.2287 },
 };
 
 // Labels live in public/locales/<lng>/common.json under "nav.<key>"
@@ -36,7 +37,7 @@ export const myProjects = [
       border: "0.2px solid #36201D",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },
-    spotlight: "/assets/spotlight1.png",
+    spotlight: "/assets/spotlight3.png",
     tags: [
       {
         id: 1,
@@ -74,7 +75,7 @@ export const myProjects = [
     key: "rocket",
     href: "https://crypto-exchange-roan-nu.vercel.app/",
     texture: "/textures/project/crypto.mp4",
-    logo: "/assets/project-logo2.png",
+    logo: "/assets/bitcoin.png",
     logoStyle: {
       backgroundColor: "#13202F",
       border: "0.2px solid #17293E",
@@ -96,6 +97,42 @@ export const myProjects = [
         id: 3,
         name: "TypeScript",
         path: "/assets/typescript.png",
+      },
+      {
+        id: 4,
+        name: "Firebase",
+        path: "/assets/firebase.svg",
+      },
+    ],
+  },
+  {
+    key: "tictactoe",
+    href: "https://gitlab.com/celadonfrontend/frontend-task-1/-/tree/main?ref_type=heads",
+    texture: "/textures/project/tictactoe.mp4",
+    logo: "/assets/cube3.png",
+    logoStyle: {
+      backgroundColor: "#836580",
+      background:
+        "linear-gradient(90deg, #355C7D, #C06C84), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+    },
+    spotlight: "/assets/spotlight5.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/react.svg",
+      },
+      {
+        id: 2,
+        name: "CSS",
+        path: "/assets/css2.png",
+      },
+      {
+        id: 3,
+        name: "Javascript",
+        path: "/assets/javascript.png",
       },
       {
         id: 4,
@@ -147,7 +184,7 @@ export const workExperiences = [
     key: "celadonsoft-dev",
     name: "Celadonsoft",
     icon: "/assets/celadon.png",
-    animation: "victory",
+    animation: "salute",
   },
   {
     key: "erciyes",
@@ -165,6 +202,6 @@ export const workExperiences = [
     key: "market-calculus",
     name: "Market Calculus",
     icon: "/assets/marketcalculus_logo.jpg",
-    animation: "salute",
+    animation: "victory",
   },
 ];

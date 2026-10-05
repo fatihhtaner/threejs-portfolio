@@ -45,7 +45,7 @@ const AboutGlobe = ({ label, paused = false }) => {
           ...personalInfo.location,
           text: label,
           color: "white",
-          size: 100,
+          size: 1500,
         },
       ]}
       controllerType="orbit"

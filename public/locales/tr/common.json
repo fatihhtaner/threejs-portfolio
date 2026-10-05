@@ -18,6 +18,13 @@
     "danger": "Hata"
   },
   "footer": {
-    "rights": "Tüm hakları saklıdır."
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "rights": "Tüm hakları saklıdır.",
+    "social": {
+      "github": "GitHub Profili",
+      "linkedin": "LinkedIn Profili",
+      "gitlab": "GitLab Projeleri"
+    }
   }
 }

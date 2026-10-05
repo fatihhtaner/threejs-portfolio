@@ -1,5 +1,5 @@
 {
-  "title": "My Work Experience",
+  "title": "Work Experience",
   "items": {
     "celadonsoft-dev": {
       "position": "Software Developer",
@@ -7,9 +7,9 @@
       "desc": "I developed applications based on customer needs using technologies such as React, React Native, TypeScript, and Redux. In this role, we also refactored the SellItBack application to improve performance, maintainability, and scalability. Additionally, I developed the admin panel of the 12Reps project using React."
     },
     "erciyes": {
-      "position": "Young Talent",
+      "position": "Youth Talent",
       "duration": "July 2024 - September 2024",
-      "desc": "As part of the Young Talent program, I migrated the patch distribution service of the holding and its group companies from Desktop Central to Microsoft Intune. I also gained knowledge in virtualization."
+      "desc": "As part of the Young Talent Program, I migrated the patch management service of the holding and its group companies from Desktop Central to Microsoft Intune. Additionally, I gained knowledge in Active Directory, Domain Controller management, virtualization, and virtual machine setup."
     },
     "celadonsoft-intern": {
       "position": "Software Developer Intern",
@@ -19,7 +19,7 @@
     "market-calculus": {
       "position": "Frontend Developer Intern",
       "duration": "August 2023 - September 2023",
-      "desc": "During my internship, I learned version control systems, TypeScript, and Jira. Later, I joined an ongoing React project and integrated the drag-and-drop features assigned to me into the company's production environment."
+      "desc": "During my internship, I learned version control systems, TypeScript, and Jira technologies. Later, I joined an ongoing React project and integrated the drag-and-drop features assigned to me into the company’s production environment."
     }
   }
 }

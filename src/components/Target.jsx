@@ -1,20 +1,33 @@
-import { useGLTF } from "@react-three/drei";
-import { useRef, Suspense } from "react";
+import { useRef, useState, useEffect } from "react";
+import { GLTFLoader } from "three-stdlib";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import ErrorBoundary from "./ErrorBoundary";
 
-// Inner component that handles the model loading
-// Note: The Supabase URL is currently unavailable (ERR_NAME_NOT_RESOLVED).
-// The ErrorBoundary will catch any loading errors and return null.
-const TargetModel = (props) => {
+const MODEL_URL = "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf";
+
+const Target = (props) => {
   const targetRef = useRef();
-  const { scene } = useGLTF(
-    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf"
-  );
+  const [scene, setScene] = useState(null);
+  const [error, setError] = useState(false);
+
+  // Manually load the model with error handling
+  useEffect(() => {
+    const loader = new GLTFLoader();
+    loader.load(
+      MODEL_URL,
+      (gltf) => {
+        setScene(gltf.scene);
+      },
+      undefined,
+      (err) => {
+        console.warn("Target model failed to load:", err);
+        setError(true);
+      }
+    );
+  }, []);
 
   useGSAP(() => {
-    if (targetRef.current) {
+    if (targetRef.current && scene && !error) {
       gsap.to(targetRef.current.position, {
         y: targetRef.current.position.y + 0.5,
         duration: 1.5,
@@ -22,23 +35,17 @@ const TargetModel = (props) => {
         yoyo: true,
       });
     }
-  });
+  }, [scene, error]);
+
+  // Return null if there's an error or scene hasn't loaded yet
+  if (error || !scene) {
+    return null;
+  }
 
   return (
     <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]}>
       <primitive object={scene} />
     </mesh>
-  );
-};
-
-// Wrapper with ErrorBoundary and Suspense to handle loading errors gracefully
-const Target = (props) => {
-  return (
-    <ErrorBoundary fallback={null}>
-      <Suspense fallback={null}>
-        <TargetModel {...props} />
-      </Suspense>
-    </ErrorBoundary>
   );
 };
 
