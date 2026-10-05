@@ -1,7 +1,5 @@
 {
-  "Hero": {
-    "greeting": "Selam! Ben Fatih",
-    "tagline": "Hayallerinizi geliştiriyorum",
-    "cta": "Hadi birlikte çalışalım"
-  }
+  "greeting": "Selam! Ben Fatih",
+  "tagline": "Hayallerinizi geliştiriyorum",
+  "cta": "Hadi birlikte çalışalım"
 }

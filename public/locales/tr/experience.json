@@ -1,0 +1,25 @@
+{
+  "title": "İş Deneyimim",
+  "items": {
+    "celadonsoft-dev": {
+      "position": "Yazılım Geliştirici",
+      "duration": "Ekim 2024 - Nisan 2025",
+      "desc": "Müşteri ihtiyaçlarına göre React, React Native, TypeScript ve Redux gibi teknolojiler kullanarak uygulamalar geliştirdim. Bu rolde, performans, sürdürülebilirlik ve ölçeklenebilirliği artırmak için SellItBack uygulamasını yeniden yapılandırdık. Ayrıca React kullanarak 12Reps projesinin admin panelini geliştirdim."
+    },
+    "erciyes": {
+      "position": "Genç Yetenek",
+      "duration": "Temmuz 2024 - Eylül 2024",
+      "desc": "Genç Yetenek programı kapsamında, holding ve grup şirketlerinin yama dağıtım hizmetini Desktop Central'dan Microsoft Intune'a taşıdım. Ayrıca sanallaştırma konusunda bilgi edindim."
+    },
+    "celadonsoft-intern": {
+      "position": "Yazılım Geliştirici Stajyeri",
+      "duration": "Ekim 2023 - Nisan 2024",
+      "desc": "Staj süresince Node.js, React ve MongoDB kullanarak MERN tabanlı bir Kütüphane (BookStore) projesi geliştirdim. Ayrıca React ile PragueCoolPass web sitesinin klonunu oluşturdum ve 3D küp üzerinde oynanabilen online TicTacToe oyunu yaptım."
+    },
+    "market-calculus": {
+      "position": "Frontend Developer Stajyeri",
+      "duration": "Ağustos 2023 - Eylül 2023",
+      "desc": "Staj süresince versiyon kontrol sistemleri, TypeScript ve Jira'yı öğrendim. Daha sonra devam eden bir React projesine katıldım ve bana verilen sürükle-bırak özelliklerini şirketin canlı ortamına entegre ettim."
+    }
+  }
+}

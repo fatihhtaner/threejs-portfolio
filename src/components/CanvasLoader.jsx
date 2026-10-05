@@ -1,7 +1,10 @@
 import { Html, useProgress } from "@react-three/drei";
+import { useTranslation } from "react-i18next";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
+  // Never suspend here: this component is itself a Suspense fallback
+  const { t } = useTranslation("common", { useSuspense: false });
 
   return (
     <Html
@@ -23,7 +26,7 @@ const CanvasLoader = () => {
             marginTop: 40,
           }}
         >
-          {progress !== 0 ? `${progress.toFixed(2)}%` : "Loading..."}
+          {progress !== 0 ? `${progress.toFixed(0)}%` : t("loader.loading")}
         </p>
       </span>
     </Html>
