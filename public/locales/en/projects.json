@@ -1,0 +1,18 @@
+{
+  "title": "My Projects",
+  "checkSite": "Visit Site",
+  "previous": "Previous project",
+  "next": "Next project",
+  "items": {
+    "physico": {
+      "title": "Physico - Physiotherapy App",
+      "desc": "Physico is a mobile and web application built to make physiotherapy more accessible for patients with limited mobility. It offers a chat room that simplifies communication between patients and doctors, and patients can easily access the exercises assigned by their doctor along with videos, descriptions, sets and repetitions.",
+      "subdesc": "The web client uses React, Redux Toolkit and Bootstrap; the mobile app uses React Native, Expo and CSS. The backend is built with Node.js, Express.js, Socket.io and MongoDB. Physico was designed with performance and scalability in mind."
+    },
+    "rocket": {
+      "title": "Rocket - Crypto Exchange Platform",
+      "desc": "Rocket is a modern, secure and user-friendly exchange platform where users can buy and sell cryptocurrencies. With real-time charts, favorites, multi-language support and Firebase-based account management, it's a practical way to manage your digital assets.",
+      "subdesc": "Built with Next.js, TypeScript, Firebase and i18n, Rocket is optimized for both beginners and experienced investors. Explore the crypto market, invest and track your portfolio in real time!"
+    }
+  }
+}

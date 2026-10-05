@@ -1,5 +1,5 @@
 import About from "./sections/About";
-import Clients from "./sections/Clients";
+// import Clients from "./sections/Clients";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import Footer from "./sections/Footer";
@@ -14,7 +14,7 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
-      <Clients />
+      {/* <Clients /> */}
       <Experience />
       <Contact />
       <Footer />

@@ -1,22 +1,31 @@
 import { useRef, useEffect } from "react";
-import { useGLTF, useAnimations, useVideoTexture } from "@react-three/drei";
+import { useGLTF, useVideoTexture } from "@react-three/drei";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const DemoComputer = (props) => {
+const DemoComputer = ({
+  texture = "/textures/project/project1.mp4",
+  paused = false,
+  ...props
+}) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/computer.glb");
-  const { actions } = useAnimations(animations, group);
+  const { nodes, materials } = useGLTF("/models/computer.glb");
 
-  const txt = useVideoTexture(
-    props.texture ? props.texture : "/textures/project/project1.mp4"
-  );
+  const txt = useVideoTexture(texture);
 
   useEffect(() => {
     if (txt) {
       txt.flipY = false;
     }
   }, [txt]);
+
+  // Stop decoding the video while the scene is off-screen
+  useEffect(() => {
+    const video = txt?.image;
+    if (!video) return;
+    if (paused) video.pause();
+    else video.play().catch(() => {});
+  }, [txt, paused]);
 
   useGSAP(() => {
     gsap.from(group.current.rotation, {
@@ -1016,6 +1025,5 @@ const DemoComputer = (props) => {
   );
 };
 
-useGLTF.preload("/models/computer.glb");
 
 export default DemoComputer;
