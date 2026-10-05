@@ -6,6 +6,7 @@ import { Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Developer from "../components/Developer";
 import useInView from "../hooks/useInView";
+import CanvasErrorBoundary from "../components/CanvasErrorBoundary";
 
 const Experience = () => {
   const { t } = useTranslation("experience");
@@ -19,19 +20,21 @@ const Experience = () => {
         <div className="work-container">
           <div className="work-canvas" ref={canvasRef}>
             {hasBeenInView && (
-              <Canvas dpr={[1, 1.5]} frameloop={inView ? "always" : "never"}>
-                <ambientLight intensity={7} />
-                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                <directionalLight position={[10, 10, 10]} intensity={1} />
-                <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-                <Suspense fallback={<CanvasLoader />}>
-                  <Developer
-                    position-y={-3}
-                    scale={3}
-                    animationName={animationName}
-                  />
-                </Suspense>
-              </Canvas>
+              <CanvasErrorBoundary>
+                <Canvas dpr={[1, 1.5]} frameloop={inView ? "always" : "never"}>
+                  <ambientLight intensity={7} />
+                  <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                  <directionalLight position={[10, 10, 10]} intensity={1} />
+                  <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+                  <Suspense fallback={<CanvasLoader />}>
+                    <Developer
+                      position-y={-3}
+                      scale={3}
+                      animationName={animationName}
+                    />
+                  </Suspense>
+                </Canvas>
+              </CanvasErrorBoundary>
             )}
           </div>
 

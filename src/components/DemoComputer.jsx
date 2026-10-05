@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const DemoComputer = ({
-  texture = "/textures/project/project1.mp4",
+  texture = "/textures/project/physico.mp4",
   paused = false,
   ...props
 }) => {

@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "experience": "Experience",
+    "experience": "Experiences",
     "contact": "Contact",
     "toggleMenu": "Toggle menu"
   },
@@ -18,6 +18,13 @@
     "danger": "Failed"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved.",
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile",
+      "gitlab": "GitLab Projects"
+    }
   }
 }
