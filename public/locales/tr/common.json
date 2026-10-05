@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "toggleMenu": "Menüyü aç/kapat"
+  },
+  "language": {
+    "label": "Dil"
+  },
+  "loader": {
+    "loading": "Yükleniyor..."
+  },
+  "alert": {
+    "success": "Başarılı",
+    "danger": "Hata"
+  },
+  "footer": {
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "rights": "Tüm hakları saklıdır.",
+    "social": {
+      "github": "GitHub Profili",
+      "linkedin": "LinkedIn Profili",
+      "gitlab": "GitLab Projeleri"
+    }
+  }
+}

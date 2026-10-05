@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experiences",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "loader": {
+    "loading": "Loading..."
+  },
+  "alert": {
+    "success": "Success",
+    "danger": "Failed"
+  },
+  "footer": {
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved.",
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile",
+      "gitlab": "GitLab Projects"
+    }
+  }
+}
