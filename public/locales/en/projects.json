@@ -5,9 +5,9 @@
   "next": "Next project",
   "items": {
     "physico": {
-      "title": "Pyshico - Physiotherapy App",
-      "desc": "Pyshico is a mobile and web application developed to reduce the challenges faced by patients with limited mobility in accessing physiotherapy centers. It provides a chat room that facilitates communication between patients and doctors. Patients can easily access details about assigned exercises, such as videos, descriptions, sets, and repetitions.",
-      "subdesc": "The web version is built with React, Redux Toolkit, and Bootstrap, while the mobile version uses React Native, Expo, and CSS. The backend is developed using Node.js, Express.js, Socket.io, and MongoDB. Pyshico is designed with a focus on high performance and scalability."
+      "title": "Physico - Physiotherapy App",
+      "desc": "Physico is a mobile and web application developed to reduce the challenges faced by patients with limited mobility in accessing physiotherapy centers. It provides a chat room that facilitates communication between patients and doctors. Patients can easily access details about assigned exercises, such as videos, descriptions, sets, and repetitions.",
+      "subdesc": "The web version is built with React, Redux Toolkit, and Bootstrap, while the mobile version uses React Native, Expo, and CSS. The backend is developed using Node.js, Express.js, Socket.io, and MongoDB. Physico is designed with a focus on high performance and scalability."
     },
     "rocket": {
       "title": "Rocket - Cryptocurrency Platform",

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { personalInfo } from "../constants";
+import { trackEvent } from "../lib/analytics";
 
 const socialLinks = [
   { key: "github", href: personalInfo.github, icon: "/assets/github.svg" },
@@ -25,6 +26,7 @@ const Footer = () => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("social_click", { network: key })}
             aria-label={t(`footer.social.${key}`)}
             className="social-icon hover:bg-black-500 transition-colors"
           >
