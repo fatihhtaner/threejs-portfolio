@@ -1,24 +1,36 @@
 import { useTranslation } from "react-i18next";
-import { TR, GB } from "country-flag-icons/react/3x2";
+import { SUPPORTED_LANGUAGES } from "../i18n";
+import { trackEvent } from "../lib/analytics";
 
-const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-  const currentLang = i18n.language;
-
-  const toggleLanguage = () => {
-    const newLang = currentLang === "en" ? "tr" : "en";
-    i18n.changeLanguage(newLang);
-  };
+const LanguageSwitcher = ({ className = "" }) => {
+  const { t, i18n } = useTranslation();
+  // resolvedLanguage is always one of SUPPORTED_LANGUAGES (unlike i18n.language, which can be "en-US")
+  const currentLang = i18n.resolvedLanguage;
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className="flex items-center text-sm font-medium text-neutral-400 hover:text-white transition-colors ml-4 group"
+    <div
+      role="group"
+      aria-label={t("language.label")}
+      className={`lang-switcher ${className}`}
     >
-      <div className="w-6 h-4 group-hover:scale-110 transition-transform duration-200 rounded-sm overflow-hidden">
-        {currentLang === "en" ? <TR /> : <GB />}
-      </div>
-    </button>
+      {SUPPORTED_LANGUAGES.map((lng) => (
+        <button
+          key={lng}
+          type="button"
+          onClick={() => {
+            if (lng === currentLang) return;
+            i18n.changeLanguage(lng);
+            trackEvent("language_change", { language: lng });
+          }}
+          aria-pressed={currentLang === lng}
+          className={`lang-switcher_btn ${
+            currentLang === lng ? "lang-switcher_btn--active" : ""
+          }`}
+        >
+          {lng.toUpperCase()}
+        </button>
+      ))}
+    </div>
   );
 };
 

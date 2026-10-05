@@ -119,6 +119,5 @@ const Developer = ({ animationName = "idle", ...props }) => {
   );
 };
 
-useGLTF.preload("/models/animations/developer2.glb");
 
 export default Developer;

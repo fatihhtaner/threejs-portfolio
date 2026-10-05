@@ -1,43 +1,25 @@
-import Globe from "react-globe.gl";
-import Button from "../components/Button";
-import { useState, useRef, useEffect } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Button from "../components/Button";
+import { personalInfo } from "../constants";
+import useInView from "../hooks/useInView";
+
+// The globe pulls in a large library, so it is split out and only loaded
+// when the About section approaches the viewport
+const AboutGlobe = lazy(() => import("../components/AboutGlobe"));
 
 const About = () => {
   const { t } = useTranslation("about");
   const [hasCopied, setHasCopied] = useState(false);
-  const globeEl = useRef();
+  const { ref: globeRef, inView, hasBeenInView } = useInView();
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(t("email"));
+    navigator.clipboard.writeText(personalInfo.email);
     setHasCopied(true);
     setTimeout(() => {
       setHasCopied(false);
     }, 2000);
   };
-
-  useEffect(() => {
-    let animationId;
-    const animate = () => {
-      if (globeEl.current && globeEl.current.controls()) {
-        const controls = globeEl.current.controls();
-        controls.autoRotate = true;
-        controls.update();
-      }
-      animationId = requestAnimationFrame(animate);
-    };
-
-    const timer = setTimeout(() => {
-      animate();
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, []);
 
   return (
     <section className="c-space my-20" id="about">
@@ -58,7 +40,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container items-center">
             <img
-              src="/assets/Başlıksız-1 (1).png"
+              src="/assets/tech-stack.png"
               alt="grid-2"
               className="w-full sm:w-[276px] h-fit object-contain"
             />
@@ -70,49 +52,25 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
-            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
-                ref={globeEl}
-                height={326}
-                width={326}
-                backgroundColor="rgba(0,0,0,0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.jpg"
-                labelsData={[
-                  {
-                    lat: 37.1759,
-                    lng: 33.2287,
-                    text: t("globeLabel"),
-                    color: "white",
-                    size: 1500,
-                  },
-                ]}
-                controllerType="orbit"
-                enablePointerInteraction={true}
-                onGlobeReady={() => {
-                  if (globeEl.current && globeEl.current.controls()) {
-                    const controls = globeEl.current.controls();
-                    controls.autoRotate = true;
-                    controls.autoRotateSpeed = 0.5;
-                    controls.dampingFactor = 0.1;
-                    controls.enableDamping = true;
-                  }
-                }}
-              />
+            <div
+              ref={globeRef}
+              className="rounded-3xl w-full h-[326px] flex justify-center items-center"
+            >
+              {hasBeenInView && (
+                <Suspense fallback={null}>
+                  <AboutGlobe label={t("globeLabel")} paused={!inView} />
+                </Suspense>
+              )}
             </div>
             <div>
               <p className="grid-headtext">{t("remoteWorkTitle")}</p>
               <p className="grid-subtext">{t("remoteWorkDesc")}</p>
-              <a href="#contact" className="w-fit">
-                <Button
-                  name={t("contactBtn")}
-                  isBeam
-                  containerClass="w-full mt-10"
-                />
-              </a>
+              <Button
+                href="#contact"
+                name={t("contactBtn")}
+                isBeam
+                containerClass="w-full mt-10"
+              />
             </div>
           </div>
         </div>
@@ -122,7 +80,7 @@ const About = () => {
             <img
               src="/assets/grid3.png"
               alt="grid-3"
-              className="w-full sm:h-[266px] h-fit object-container"
+              className="w-full sm:h-[266px] h-fit object-contain"
             />
             <div>
               <p className="grid-headtext">{t("passionTitle")}</p>
@@ -142,7 +100,7 @@ const About = () => {
               <p className="grid-subtext text-center">{t("contactMe")}</p>
               <div className="copy-container" onClick={handleCopy}>
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
-                  {t("email")}
+                  {personalInfo.email}
                 </p>
                 <img
                   src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}

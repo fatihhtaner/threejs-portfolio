@@ -1,0 +1,25 @@
+{
+  "title": "Müşterilerim Ne Diyor",
+  "items": {
+    "1": {
+      "name": "Batuhan Kaya",
+      "position": "Yazılım Geliştirici",
+      "review": "Adrian ile çalışmak harika bir deneyimdi. Eski web sitemizi modern, kullanıcı dostu bir platforma dönüştürdü. Detaylara gösterdiği özen ve kaliteye olan bağlılığı eşsiz. Herhangi bir web geliştirme projesi için şiddetle tavsiye ederim."
+    },
+    "2": {
+      "name": "Mark Rogers",
+      "position": "TechGear Shop Kurucusu",
+      "review": "Adrian’ın web geliştirme konusundaki uzmanlığı gerçekten etkileyici. E-ticaret sitemiz için sağlam ve ölçeklenebilir bir çözüm sundu ve lansmandan sonra çevrimiçi satışlarımız önemli ölçüde arttı. Gerçek bir profesyonel! Harika iş."
+    },
+    "3": {
+      "name": "John Dohsas",
+      "position": "UrbanTech Proje Yöneticisi",
+      "review": "Adrian hakkında yeterince iyi şeyler söyleyemem. Karmaşık proje gereksinimlerimizi alıp sorunsuz, işlevsel bir web sitesine dönüştürdü. Problemleri çözme yetenekleri olağanüstü."
+    },
+    "4": {
+      "name": "Ether Smith",
+      "position": "BrightStar Enterprises CEO'su",
+      "review": "Adrian ile çalışmak keyifliydi. Gereksinimlerimizi mükemmel anladı ve beklentilerimizin ötesinde bir web sitesi teslim etti. Hem frontend hem backend geliştirme konusundaki yetenekleri üst düzey."
+    }
+  }
+}

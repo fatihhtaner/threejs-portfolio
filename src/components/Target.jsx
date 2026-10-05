@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three-stdlib";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

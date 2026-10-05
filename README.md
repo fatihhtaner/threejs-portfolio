@@ -1,12 +1,40 @@
-# React + Vite
+# İbrahim Fatih Taner — 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio built with React, Vite, Three.js (React Three Fiber), GSAP and Tailwind CSS. Available in Turkish and English.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+cp .env.example .env   # fill in the EmailJS keys for the contact form
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+public/
+  locales/<lng>/*.json   # translations, one file per section (namespace)
+  models/  textures/     # 3D models and textures
+  assets/                # images and icons
+src/
+  constants/index.js     # non-translatable data (links, images, 3D layout)
+  sections/              # page sections (Hero, About, Projects, ...)
+  components/            # shared UI and 3D components
+  i18n.js                # i18next setup
+```
+
+## Translations
+
+Every visible string lives in `public/locales/{tr,en}/<namespace>.json`.
+Data in `src/constants` only stores a `key`; components look up the text with
+`t("items.<key>.<field>")`. To add a project or job, add an entry to
+`src/constants/index.js` **and** the matching `items.<key>` block to both
+`tr` and `en` locale files.
+
+## Deploy
+
+```bash
+npm run build
+firebase deploy
+```

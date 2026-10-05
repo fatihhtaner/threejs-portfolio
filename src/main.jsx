@@ -1,14 +1,17 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import "./i18n";
-import { I18nextProvider } from "react-i18next";
+import { initAnalytics } from "./lib/analytics";
+import App from "./App.jsx";
+
+initAnalytics();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <I18nextProvider>
+    {/* Translations are loaded over HTTP; wait for them before rendering */}
+    <Suspense fallback={<div className="page-loader" />}>
       <App />
-    </I18nextProvider>
+    </Suspense>
   </StrictMode>
 );

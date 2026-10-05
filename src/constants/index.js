@@ -1,54 +1,34 @@
-import LanguageSwitcher from "../components/LanguageSwitcher";
+export const personalInfo = {
+  name: "Ibrahim Fatih Taner",
+  email: "ibrahimfatihtaner@gmail.com",
+  github: "https://github.com/fatihhtaner",
+  linkedin: "https://www.linkedin.com/in/fatih-taner/",
+  gitlab: "https://gitlab.com/users/ibrahimfatihtaner/projects",
+  // Shown on the globe in the About section
+  location: { lat: 37.1759, lng: 33.2287 },
+};
 
-export const navLinks = (t) => [
-  {
-    id: 1,
-    name: t("navLinks.home", { ns: "constants" }),
-    href: "#home",
-    type: "link",
-  },
-  {
-    id: 2,
-    name: t("navLinks.about", { ns: "constants" }),
-    href: "#about",
-    type: "link",
-  },
-  {
-    id: 3,
-    name: t("navLinks.work", { ns: "constants" }),
-    href: "#projects",
-    type: "link",
-  },
-  {
-    id: 4,
-    name: t("navLinks.exp", { ns: "constants" }),
-    href: "#experiences",
-    type: "link",
-  },
-  {
-    id: 5,
-    name: t("navLinks.contact", { ns: "constants" }),
-    href: "#contact",
-    type: "link",
-  },
-  { id: 6, type: "component", component: LanguageSwitcher },
+// Labels live in public/locales/<lng>/common.json under "nav.<key>"
+export const navLinks = [
+  { key: "home", href: "#home" },
+  { key: "about", href: "#about" },
+  { key: "projects", href: "#projects" },
+  { key: "experience", href: "#experience" },
+  { key: "contact", href: "#contact" },
 ];
 
+// Texts live in public/locales/<lng>/clients.json under "items.<id>"
 export const clientReviews = [
-  {
-    id: 1,
-    name: "name",
-    position: "position",
-    img: "assets/review1.png",
-    review: "review",
-  },
+  { id: 1, img: "/assets/review1.png" },
+  { id: 2, img: "/assets/review2.png" },
+  { id: 3, img: "/assets/review3.png" },
+  { id: 4, img: "/assets/review4.png" },
 ];
 
-export const myProjects = (t) => [
+// Texts live in public/locales/<lng>/projects.json under "items.<key>"
+export const myProjects = [
   {
-    title: t("projects.pyshico.title", { ns: "constants" }),
-    desc: t("projects.pyshico.desc", { ns: "constants" }),
-    subdesc: t("projects.pyshico.subdesc", { ns: "constants" }),
+    key: "physico",
     href: "https://onurkaygn.github.io/physicohealth/",
     texture: "/textures/project/physico.mp4",
     logo: "/assets/physico2.png",
@@ -67,7 +47,7 @@ export const myProjects = (t) => [
       {
         id: 2,
         name: "BootStrap",
-        path: "assets/bootstrap.png",
+        path: "/assets/bootstrap.png",
       },
       {
         id: 3,
@@ -92,9 +72,7 @@ export const myProjects = (t) => [
     ],
   },
   {
-    title: t("projects.rocket.title", { ns: "constants" }),
-    desc: t("projects.rocket.desc", { ns: "constants" }),
-    subdesc: t("projects.rocket.subdesc", { ns: "constants" }),
+    key: "rocket",
     href: "https://crypto-exchange-roan-nu.vercel.app/",
     texture: "/textures/project/crypto.mp4",
     logo: "/assets/bitcoin.png",
@@ -113,7 +91,7 @@ export const myProjects = (t) => [
       {
         id: 2,
         name: "BootStrap",
-        path: "assets/bootstrap.png",
+        path: "/assets/bootstrap.png",
       },
       {
         id: 3,
@@ -128,9 +106,7 @@ export const myProjects = (t) => [
     ],
   },
   {
-    title: t("projects.tictactoe.title", { ns: "constants" }),
-    desc: t("projects.tictactoe.desc", { ns: "constants" }),
-    subdesc: t("projects.tictactoe.subdesc", { ns: "constants" }),
+    key: "tictactoe",
     href: "https://gitlab.com/celadonfrontend/frontend-task-1/-/tree/main?ref_type=heads",
     texture: "/textures/project/tictactoe.mp4",
     logo: "/assets/cube3.png",
@@ -151,7 +127,7 @@ export const myProjects = (t) => [
       {
         id: 2,
         name: "CSS",
-        path: "assets/css2.png",
+        path: "/assets/css2.png",
       },
       {
         id: 3,
@@ -202,40 +178,29 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
   };
 };
 
-export const workExperiences = (t) => [
+// Texts live in public/locales/<lng>/experience.json under "items.<key>"
+export const workExperiences = [
   {
-    id: 1,
+    key: "celadonsoft-dev",
     name: "Celadonsoft",
-    pos: t("experience.celadon1.position", { ns: "experience" }),
-    duration: t("experience.celadon1.duration", { ns: "experience" }),
-    title: t("experience.celadon1.title", { ns: "experience" }),
     icon: "/assets/celadon.png",
     animation: "salute",
   },
   {
-    id: 2,
+    key: "erciyes",
     name: "Erciyes Anadolu Holding",
-    pos: t("experience.erciyes.position", { ns: "experience" }),
-    duration: t("experience.erciyes.duration", { ns: "experience" }),
-    title: t("experience.erciyes.title", { ns: "experience" }),
     icon: "/assets/erciyes.jpg",
     animation: "clapping",
   },
   {
-    id: 3,
+    key: "celadonsoft-intern",
     name: "Celadonsoft",
-    pos: t("experience.celadon2.position", { ns: "experience" }),
-    duration: t("experience.celadon2.duration", { ns: "experience" }),
-    title: t("experience.celadon2.title", { ns: "experience" }),
     icon: "/assets/celadon.png",
     animation: "salute",
   },
   {
-    id: 4,
+    key: "market-calculus",
     name: "Market Calculus",
-    pos: t("experience.marketcalculus.position", { ns: "experience" }),
-    duration: t("experience.marketcalculus.duration", { ns: "experience" }),
-    title: t("experience.marketcalculus.title", { ns: "experience" }),
     icon: "/assets/marketcalculus_logo.jpg",
     animation: "victory",
   },
